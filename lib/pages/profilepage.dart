@@ -14,6 +14,12 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
+
+    // Adicione um ouvinte para atualizar a interface do usuário quando o tema muda
+    ThemeManager.addThemeListener((isDarkMode) {
+      setState(() {
+      });
+    });
     return Scaffold(
       appBar: AppBar(
         title: const Text("Profile"),
@@ -25,11 +31,9 @@ class _ProfilePageState extends State<ProfilePage> {
           if (Theme.of(context).brightness == Brightness.light) {
             // Alterne para o modo escuro
             ThemeManager.toggleDarkMode(true);
-            print('Modo escuro ativo');
           } else {
             // Alterne para o modo claro
             ThemeManager.toggleDarkMode(false);
-            print('Modo claro ativo');
           }
         },
         child: Icon(Icons.brightness_4), // Ícone do sol/lua para alternar o modo

@@ -54,10 +54,12 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        brightness: Brightness.light,
           primaryColor: Constants().primaryColor,
           scaffoldBackgroundColor: Color.fromARGB(255, 253, 249, 249),
       ),
       darkTheme: ThemeData(
+        brightness: Brightness.dark,
         primaryColor: Constants().darkPrimaryColor,
         scaffoldBackgroundColor: Color.fromARGB(255, 38, 38, 38),
       ),
