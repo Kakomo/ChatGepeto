@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "388636729737",
+    "project_id": "chat-b1907",
+    "storage_bucket": "chat-b1907.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388636729737:android:4b62cba300887eae768158",
+        "android_client_info": {
+          "package_name": "com.kako.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388636729737-2o9sar689770966ntrmgaef0lh0ouso5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF1_DzejjRSYmy3fBCiefyZDXbkcfmwkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388636729737-2o9sar689770966ntrmgaef0lh0ouso5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
