@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme_manager.dart';
+
 class ProfilePage extends StatefulWidget {
   String userName;
   String email;
@@ -16,6 +18,21 @@ class _ProfilePageState extends State<ProfilePage> {
       appBar: AppBar(
         title: const Text("Profile"),
         backgroundColor: Theme.of(context).primaryColor,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Alternar o modo claro/escuro
+          if (Theme.of(context).brightness == Brightness.light) {
+            // Alterne para o modo escuro
+            ThemeManager.toggleDarkMode(true);
+            print('Modo escuro ativo');
+          } else {
+            // Alterne para o modo claro
+            ThemeManager.toggleDarkMode(false);
+            print('Modo claro ativo');
+          }
+        },
+        child: Icon(Icons.brightness_4), // Ícone do sol/lua para alternar o modo
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 170),
@@ -57,6 +74,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   widget.email,
                   style: const TextStyle(fontSize: 17),
                 ),
+
               ],
             ),
           ],
