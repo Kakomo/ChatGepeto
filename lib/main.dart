@@ -59,7 +59,7 @@ class _MyAppState extends State<MyApp> {
       ),
       darkTheme: ThemeData(
         primaryColor: Constants().darkPrimaryColor,
-        scaffoldBackgroundColor: Color.fromARGB(255, 253, 249, 249),
+        scaffoldBackgroundColor: Color.fromARGB(255, 38, 38, 38),
       ),
 
       home: _isSignedIn ? const HomeScreen() : const LoginScreen(),
