@@ -31,6 +31,20 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
+bool temaBool = true;
+
+ThemeData temaClaro = ThemeData(
+  brightness: Brightness.light,
+  primaryColor: Constants().primaryColor,
+  scaffoldBackgroundColor: Color.fromARGB(255, 253, 249, 249),
+);
+
+ThemeData temaEscuro = ThemeData(
+  brightness: Brightness.dark,
+  primaryColor: Constants().darkPrimaryColor,
+  scaffoldBackgroundColor: Color.fromARGB(255, 38, 38, 38),
+);
+
 class _MyAppState extends State<MyApp> {
   bool _isSignedIn = false;
 
@@ -53,17 +67,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        brightness: Brightness.light,
-          primaryColor: Constants().primaryColor,
-          scaffoldBackgroundColor: Color.fromARGB(255, 253, 249, 249),
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: Constants().darkPrimaryColor,
-        scaffoldBackgroundColor: Color.fromARGB(255, 38, 38, 38),
-      ),
-
+      themeMode: ThemeMode.system,
+      theme: temaBool ? temaClaro : temaEscuro,
       home: _isSignedIn ? const HomeScreen() : const LoginScreen(),
     );
   }

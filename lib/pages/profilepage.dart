@@ -15,11 +15,6 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
 
-    // Adicione um ouvinte para atualizar a interface do usuário quando o tema muda
-    ThemeManager.addThemeListener((isDarkMode) {
-      setState(() {
-      });
-    });
     return Scaffold(
       appBar: AppBar(
         title: const Text("Profile"),

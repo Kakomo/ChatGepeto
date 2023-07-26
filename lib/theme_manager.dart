@@ -9,6 +9,7 @@ class ThemeManager {
     _isDarkMode = value;
     // Notifica os listeners de que o tema mudou para que a interface do usuário seja atualizada
     notifyListeners();
+    print('Mudou o tema ');
   }
 
   // Outras configurações relacionadas ao tema podem ser adicionadas aqui
